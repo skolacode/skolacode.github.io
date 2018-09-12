@@ -10,5 +10,41 @@
 </head>
 <body>
   <h1>Welcome to Skola Code</h1>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBQ3J2TWWQwekClKOFFhLPEOH10g66laa0",
+      authDomain: "skolacode-3eacd.firebaseapp.com",
+      databaseURL: "https://skolacode-3eacd.firebaseio.com",
+      projectId: "skolacode-3eacd",
+      storageBucket: "skolacode-3eacd.appspot.com",
+      messagingSenderId: "503112084316"
+    };
+    firebase.initializeApp(config);
+
+    function saveToFirebase(email) {
+          var emailObject = {
+              email: email
+          };
+
+          firebase.database().ref('subscription-entries').push().set(emailObject)
+              .then(function(snapshot) {
+                  success(); // some success method
+              }, function(error) {
+                  console.log('error' + error);
+                  error(); // some error method
+              });
+      }
+      
+      $( document ).ready(function() {
+        saveToFirebase('email@mail.com');
+      });
+      
+  </script>
+
 </body>
 </html>
