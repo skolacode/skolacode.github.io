@@ -1,50 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Skola Code</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="main.js"></script>
-</head>
-<body>
-  <h1>Welcome to Skola Code.. </h1>
+---
+layout: default
+---
 
+<div class="home">
 
+  <h1>Posts</h1>
 
-  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBQ3J2TWWQwekClKOFFhLPEOH10g66laa0",
-      authDomain: "skolacode-3eacd.firebaseapp.com",
-      databaseURL: "https://skolacode-3eacd.firebaseio.com",
-      projectId: "skolacode-3eacd",
-      storageBucket: "skolacode-3eacd.appspot.com",
-      messagingSenderId: "503112084316"
-    };
-    firebase.initializeApp(config);
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 
-    function saveToFirebase(email) {
-          var emailObject = {
-              email: email
-          };
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-          firebase.database().ref('subscription-entries').push().set(emailObject)
-              .then(function(snapshot) {
-                  success(); // some success method
-              }, function(error) {
-                  console.log('error' + error);
-                  error(); // some error method
-              });
-      }
-      
-      $( document ).ready(function() {
-        saveToFirebase('email@mail.com');
-      });
-      
-  </script>
-
-</body>
-</html>
+</div>
