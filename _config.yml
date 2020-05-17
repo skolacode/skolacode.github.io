@@ -1,46 +1,9 @@
-url: https://y7kim.github.io
-baseurl: 
+url: https://skolacode.github.io
 
 # Site settings
 title: SkolaCode
 email: ask@skolacode.com
 description: "Skolacode, learn code with ease. Kursus Komputer - Computer Courses, #CODE,INVENT,IMPORVE. Belajar CODE dengan mudah."
-
-
-# Team names, titles and social links
-people:
-- name: Kay Garland
-  pic: 1
-  position: Lead Designer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
-
-- name: Larry Parker
-  pic: 2
-  position: Lead Marketer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: linkedin
-      url: #
-
-- name: Diana Petersen
-  pic: 3
-  position: Lead Developer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -56,4 +19,3 @@ address:
 
 # Build settings
 markdown: kramdown
-permalink: pretty
