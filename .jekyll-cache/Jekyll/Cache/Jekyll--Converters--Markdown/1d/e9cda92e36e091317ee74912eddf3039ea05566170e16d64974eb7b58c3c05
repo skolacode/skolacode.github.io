@@ -1,0 +1,22 @@
+I"¿<div class="home">
+
+  <h1>Posts</h1>
+
+  <ul class="posts">
+    
+      <li>
+        <span class="post-date">Jul 13, 2014</span>
+        <a class="post-link" href="/posts">Hello World</a>
+      </li>
+    
+      <li>
+        <span class="post-date">Jul 13, 2014</span>
+        <a class="post-link" href="/courses/react-native">Round Icons</a>
+      </li>
+    
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+</div>
+:ET
